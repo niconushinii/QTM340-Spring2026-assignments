@@ -37,46 +37,6 @@
 }{% if KOMA class
   \KOMAoptions{parskip=half}}
 \makeatother
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{#1}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -105,8 +65,6 @@
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\usepackage{fontspec}
-\setmainfont{DejaVu Serif}
 \usepackage[most]{tcolorbox}
 \usepackage{chngcntr}
 \newcounter{chapter}
@@ -214,14 +172,8 @@ this book.
 
 To check which version of R is currently running on your computer, run:
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{R.version.string}
-\end{Highlighting}
-\end{Shaded}
-
 \begin{verbatim}
-## [1] "R version 4.5.1 (2025-06-13)"
+## [1] "R version 4.5.1 (2025-06-13 ucrt)"
 \end{verbatim}
 
 If your version is more than one major release behind (e.g., anything
@@ -248,12 +200,6 @@ script editor.
 
 Try to run the code now by typing the following into your Console and
 pressing Enter, or by highlighting it and clicking Run:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{print}\NormalTok{(}\StringTok{"Hello World"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
 
 \begin{verbatim}
 ## [1] "Hello World"
@@ -291,13 +237,6 @@ or cleaning messy historical data.
 To load these specialty tools, we use \texttt{library()}, like this.
 Loading only works after the package has been installed---something we
 walk through in the ``Computer Specifications and Setup'' section.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# load the hansardr package}
-\FunctionTok{library}\NormalTok{(}\StringTok{"hansardr"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
 
 \texttt{hansardr} is now ready for use. It is conventional to load the
 software packages that will be use at the beginning of each new session.
@@ -391,13 +330,6 @@ other subsets within \texttt{hansardr} contain other data types.
 We can use \texttt{data()} to load one of these decade-based subsets of
 the Hansard corpus.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# load the Hansard debate text for 1850}
-\FunctionTok{data}\NormalTok{(}\StringTok{"hansard\_1850"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
 A new variable named \texttt{hansard\_1850} is now able to be seen in
 our Global Environment panel. If you are using RStudio, you can explore
 the data by clicking on its name in the Global Environment pane (the top
@@ -438,25 +370,6 @@ during the dataset creation stage, where the authors wrote a script to
 detect punctuation and line breaks.
 
 Below is an excerpt from \texttt{hansardr}:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{df\_head }\OtherTok{\textless{}{-}}\NormalTok{ hansard\_1850 }\SpecialCharTok{\%\textgreater{}\%} 
-  \FunctionTok{slice\_head}\NormalTok{(}\AttributeTok{n =} \DecValTok{5}\NormalTok{)}
-
-\FunctionTok{kable}\NormalTok{(df\_head, }
-      \AttributeTok{format =} \StringTok{"latex"}\NormalTok{, }
-      \AttributeTok{booktabs =} \ConstantTok{TRUE}\NormalTok{, }
-      \AttributeTok{linesep =} \StringTok{""}\NormalTok{,}
-      \AttributeTok{caption =} \StringTok{"Excerpt from the 1850 Hansard corpus showing }
-\StringTok{                 sentence{-}level text with associated sentence ID values."}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{kable\_styling}\NormalTok{(}\AttributeTok{latex\_options =} \FunctionTok{c}\NormalTok{(}\StringTok{"scale\_down"}\NormalTok{, }\StringTok{"repeat\_header"}\NormalTok{),}
-                \AttributeTok{table.envir =} \ConstantTok{FALSE}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{column\_spec}\NormalTok{(}\FunctionTok{which}\NormalTok{(}\FunctionTok{colnames}\NormalTok{(df\_head) }\SpecialCharTok{==} \StringTok{"text"}\NormalTok{), }
-              \AttributeTok{latex\_column\_spec =} \StringTok{"p\{12cm\}"}\NormalTok{, }
-              \AttributeTok{latex\_valign =} \StringTok{"top"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
 
 \begin{table}
 \centering
@@ -521,14 +434,6 @@ for processing text and treating text as data. Many sections in this
 book will therefore begin by loading the two libraries
 \texttt{tidyverse} and \texttt{tidytext}.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# load the tidyverse and tidytext packages}
-\FunctionTok{library}\NormalTok{(}\StringTok{"tidyverse"}\NormalTok{)}
-\FunctionTok{library}\NormalTok{(}\StringTok{"tidytext"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
 \subsection{Using Functions to Process
 Data}\label{using-functions-to-process-data}
 
@@ -540,15 +445,6 @@ From this point on we are going to use more complicated functions from
 different R packages to process our data. Before we take this next step,
 however, we first want to provide a basic understanding of a function's
 underlying components, by creating our own simple function:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# define a custom function to add two numbers}
-\NormalTok{add\_numbers }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(a, b) \{ }
-\NormalTok{  result }\OtherTok{\textless{}{-}}\NormalTok{ a }\SpecialCharTok{+}\NormalTok{ b }
-  \FunctionTok{return}\NormalTok{(result) \}}
-\end{Highlighting}
-\end{Shaded}
 
 The above code can be broken down into these core parts:
 
@@ -586,13 +482,6 @@ questions evolve, we often return to the same operations with new
 purposes. Having stable tools like functions allows us to revisit and
 revise our analyses without starting from scratch each time.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# use the new function we created to add 2 and 3}
-\FunctionTok{print}\NormalTok{(}\FunctionTok{add\_numbers}\NormalTok{(}\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{))}
-\end{Highlighting}
-\end{Shaded}
-
 \begin{verbatim}
 ## [1] 5
 \end{verbatim}
@@ -614,17 +503,6 @@ using the ``Bags of Words'' (BoW) approach, where text data is treated
 as a collection (or ``bag'') of individual words without regard to
 grammar, order, or context (Jockers 2015). The focus is instead on word
 frequency or occurrence.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# tokenize the \textquotesingle{}text\textquotesingle{} column of the hansard\_1850 dataset into individual words}
-\CommentTok{\# {-} \textquotesingle{}unnest\_tokens()\textquotesingle{} from the \textquotesingle{}tidytext\textquotesingle{} package splits text into lowercase words}
-\CommentTok{\# {-} the new column will be called \textquotesingle{}word\textquotesingle{}}
-\CommentTok{\# {-} each word becomes its own row }
-\NormalTok{tokenized\_hansard }\OtherTok{\textless{}{-}}\NormalTok{ hansard\_1850 }\SpecialCharTok{\%\textgreater{}\%} \CommentTok{\# create a new data frame}
-  \FunctionTok{unnest\_tokens}\NormalTok{(word, text) }\CommentTok{\# tokenize the \textquotesingle{}text\textquotesingle{} column }
-\end{Highlighting}
-\end{Shaded}
 
 The above code also has new symbols, called ``operators.'' Operators are
 essential for data processing. Throughout the course of this book we
@@ -675,13 +553,6 @@ datasets with different column names. For now, we will mainly use
 Next, let's inspect the results of our unnesting using \texttt{head()},
 which returns just the first rows of a data frame.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# show the first few rows of our tokenized data}
-\FunctionTok{head}\NormalTok{(tokenized\_hansard)}
-\end{Highlighting}
-\end{Shaded}
-
 \begin{verbatim}
 ##   sentence_id         word
 ## 1 S3V0108P0_0        which
@@ -694,13 +565,6 @@ which returns just the first rows of a data frame.
 
 However, we have a preference for looking at more data since that can
 give us a fuller picture of the data.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# show the first fifteen rows of our tokenized data}
-\FunctionTok{head}\NormalTok{(tokenized\_hansard, }\AttributeTok{n=}\DecValTok{15}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
 
 \begin{verbatim}
 ##    sentence_id         word
@@ -755,18 +619,6 @@ tokens with like tokens, then counts them. Below, we are passing
 \texttt{count()} one argument, the name of the column to operate on--in
 this case, ``word'' from the tokenized hansard data.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# count the frequency of each word in the tokenized dataset}
-\CommentTok{\# this creates a data frame with one row per unique word and a column \textquotesingle{}n\textquotesingle{} for the count}
-\NormalTok{tokenized\_hansard\_counts }\OtherTok{\textless{}{-}}\NormalTok{ tokenized\_hansard }\SpecialCharTok{\%\textgreater{}\%} \CommentTok{\# Create a new data frame }
-  \FunctionTok{count}\NormalTok{(word) }\SpecialCharTok{\%\textgreater{}\%} \CommentTok{\# count how many times each word appears}
-  \FunctionTok{arrange}\NormalTok{(}\FunctionTok{desc}\NormalTok{(n)) }\CommentTok{\# sort the results in descending order of frequency}
-
-\FunctionTok{head}\NormalTok{(tokenized\_hansard\_counts)}
-\end{Highlighting}
-\end{Shaded}
-
 \begin{verbatim}
 ##   word       n
 ## 1  the 2588864
@@ -796,19 +648,6 @@ dataset and then passing the dataset as an argument to the
 in the first dataset that do not have a match in the second dataset.
 Using \texttt{anti\_join()} we can remove words we do not want in our
 analysis from our data.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# load tidytext\textquotesingle{}s dataset of common stop words}
-\FunctionTok{data}\NormalTok{(}\StringTok{"stop\_words"}\NormalTok{)}
-
-\CommentTok{\# remove common stop words from the tokenized word counts}
-\NormalTok{stopworded\_hansard\_counts }\OtherTok{\textless{}{-}}\NormalTok{ tokenized\_hansard\_counts }\SpecialCharTok{\%\textgreater{}\%} \CommentTok{\# create a new data frame }
-  \FunctionTok{anti\_join}\NormalTok{(stop\_words) }\CommentTok{\# exclude words that appear in the stop\_words dataset}
-
-\FunctionTok{head}\NormalTok{(stopworded\_hansard\_counts)}
-\end{Highlighting}
-\end{Shaded}
 
 \begin{verbatim}
 ##         word      n
@@ -846,14 +685,6 @@ parliamentary speeches, series 3, volume 108, which has the id number
 the \texttt{stopworded\_hansard\_counts} data frame, returning only the
 rows where the word column contains the value ``india''.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# filter the word column for "india"}
-\NormalTok{stopworded\_hansard\_counts }\SpecialCharTok{\%\textgreater{}\%} 
-  \FunctionTok{filter}\NormalTok{(word }\SpecialCharTok{==} \StringTok{"india"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
 \begin{verbatim}
 ##    word     n
 ## 1 india 20816
@@ -867,26 +698,10 @@ that might contain the word ``india'' such as ``indian''.
 
 We can do the same for any other keyword of interest.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# filter the word column for "france"}
-\NormalTok{stopworded\_hansard\_counts }\SpecialCharTok{\%\textgreater{}\%} 
-  \FunctionTok{filter}\NormalTok{(word }\SpecialCharTok{==} \StringTok{"france"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
 \begin{verbatim}
 ##     word    n
 ## 1 france 7146
 \end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# filter the word column for "jamaica"}
-\NormalTok{stopworded\_hansard\_counts }\SpecialCharTok{\%\textgreater{}\%} 
-  \FunctionTok{filter}\NormalTok{(word }\SpecialCharTok{==} \StringTok{"jamaica"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
 
 \begin{verbatim}
 ##      word   n
@@ -902,27 +717,8 @@ one.
 To do this, we can first create our own custom list of words we wish to
 analyze.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# create a list of words commonly used to identify or refer to women}
-\CommentTok{\# the purpose is to help filter or analyze texts for references to women}
-\NormalTok{identifiers\_for\_woman }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"girl"}\NormalTok{, }\StringTok{"woman"}\NormalTok{, }\StringTok{"girls"}\NormalTok{, }\StringTok{"women"}\NormalTok{, }\StringTok{"wife"}\NormalTok{, }\StringTok{"wives"}\NormalTok{, }\StringTok{"widow"}\NormalTok{, }
-                           \StringTok{"widows"}\NormalTok{, }\StringTok{"sister"}\NormalTok{, }\StringTok{"sisters"}\NormalTok{, }\StringTok{"female"}\NormalTok{, }\StringTok{"females"}\NormalTok{, }
-                           \StringTok{"grandmother"}\NormalTok{,}\StringTok{"grandmothers"}\NormalTok{, }\StringTok{"aunt"}\NormalTok{, }\StringTok{"aunts"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
 Now we can use the \texttt{\%in\%} operator to check if a word from our
 list, \texttt{identifiers\_for\_woman}, is in the ``word'' column.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# filter the word counts to keep only those words that identify or refer to women}
-\CommentTok{\# this checks if each word is in the \textquotesingle{}identifiers\_for\_woman\textquotesingle{} list}
-\NormalTok{stopworded\_hansard\_counts }\SpecialCharTok{\%\textgreater{}\%} 
-  \FunctionTok{filter}\NormalTok{(word }\SpecialCharTok{\%in\%}\NormalTok{ identifiers\_for\_woman)}
-\end{Highlighting}
-\end{Shaded}
 
 \begin{verbatim}
 ##           word    n
@@ -950,15 +746,6 @@ is handy if we want to filter for words that are said more or less than
 a specified number of times, as one example. For the sake of
 readability, we are only going to show the first 20 words that follow
 our filter.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# filter the word counts to include only words that appear fewer than 474 times}
-\NormalTok{stopworded\_hansard\_counts }\SpecialCharTok{\%\textgreater{}\%} 
-  \FunctionTok{filter}\NormalTok{(n }\SpecialCharTok{\textless{}} \DecValTok{474}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%} \CommentTok{\# filter for words stated less than 474 times}
-  \FunctionTok{slice\_max}\NormalTok{(}\AttributeTok{order\_by =}\NormalTok{ n, }\AttributeTok{n =} \DecValTok{20}\NormalTok{) }\CommentTok{\# select the 20 most frequent words}
-\end{Highlighting}
-\end{Shaded}
 
 \begin{verbatim}
 ##          word   n
@@ -988,14 +775,6 @@ We can also use multiple operators in conjunction with one-another. In
 the following code we do this by supplying the \texttt{\&} operator to
 combine multiple conditions. The following example filters rows where n
 is greater than 474 and less than 476.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{stopworded\_hansard\_counts }\SpecialCharTok{\%\textgreater{}\%} 
-  \FunctionTok{filter}\NormalTok{(n }\SpecialCharTok{\textgreater{}} \DecValTok{474} \SpecialCharTok{\&}\NormalTok{ n }\SpecialCharTok{\textless{}} \DecValTok{476}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%} \CommentTok{\# keep words that occur exactly 475 times}
-  \FunctionTok{slice\_max}\NormalTok{(}\AttributeTok{order\_by =}\NormalTok{ n, }\AttributeTok{n =} \DecValTok{20}\NormalTok{) }\CommentTok{\# select 20 words (all will have n = 475)}
-\end{Highlighting}
-\end{Shaded}
 
 \begin{verbatim}
 ##           word   n
@@ -1034,14 +813,6 @@ In the following example, we iterate through each word in the
 \texttt{identifiers\_for\_woman} list to check whether the value
 contains ``girl.''
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# check which words in \textquotesingle{}identifiers\_for\_woman\textquotesingle{} contain "girl"}
-\NormalTok{identifiers\_for\_woman }\SpecialCharTok{\%\textgreater{}\%} 
-  \FunctionTok{str\_detect}\NormalTok{(}\StringTok{"girl"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
 \begin{verbatim}
 ##  [1]  TRUE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
 ## [13] FALSE FALSE FALSE FALSE
@@ -1057,16 +828,6 @@ The following example searches \texttt{hansard\_1850} for the keyword
 command \texttt{filter()}. Together, these commands tell the computer to
 filter for only those rows of the column ``text'' that contain the
 keyword ``coal.''
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# filter speeches that mention the exact word "coal"}
-\CommentTok{\# \textbackslash{}\textbackslash{}b ensures "coal" is matched as a whole word, not as part of another word }
-\CommentTok{\# (e.g. "coalesce")}
-\NormalTok{hansard\_coal }\OtherTok{\textless{}{-}}\NormalTok{ hansard\_1850 }\SpecialCharTok{\%\textgreater{}\%} \CommentTok{\# create a new data frame}
-  \FunctionTok{filter}\NormalTok{(}\FunctionTok{str\_detect}\NormalTok{(text, }\StringTok{"}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{bcoal}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{b"}\NormalTok{)) }\CommentTok{\# filter the text }
-\end{Highlighting}
-\end{Shaded}
 
 Something else interesting is happening in our code. The word ``coal''
 has a funny looking set of characters,
@@ -1089,23 +850,6 @@ match ``coal'' but not ``coalesce'' or ``charcoal.''
 The result of our search is variable, \texttt{hansard\_coal}, that
 contains only sentences from the 1850 debates that contain the word
 ``coal.''
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{library}\NormalTok{(knitr)}
-\FunctionTok{library}\NormalTok{(kableExtra)}
-
-\NormalTok{hansard\_coal }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{head}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{text =} \FunctionTok{str\_wrap}\NormalTok{(text, }\DecValTok{80}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{select}\NormalTok{(text) }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{kable}\NormalTok{(}\AttributeTok{format =} \StringTok{"latex"}\NormalTok{, }
-        \AttributeTok{booktabs =} \ConstantTok{TRUE}\NormalTok{, }
-        \AttributeTok{longtable =} \ConstantTok{TRUE}\NormalTok{, }
-        \AttributeTok{escape =} \ConstantTok{FALSE}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{column\_spec}\NormalTok{(}\DecValTok{1}\NormalTok{, }\AttributeTok{width =} \StringTok{"14cm"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
 
 \begin{longtable}{>{\raggedright\arraybackslash}p{14cm}}
 \toprule
@@ -1145,22 +889,6 @@ keywords and compare them in visual form.
 
 The following code chains multiple data processing steps together.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# tokenize the \textquotesingle{}text\textquotesingle{} column into individual lowercase words}
-\CommentTok{\# remove common stop words (e.g., \textquotesingle{}the\textquotesingle{}, \textquotesingle{}and\textquotesingle{}) that carry little meaning}
-\CommentTok{\# filter out any tokens that contain digits (e.g., years, numbers)}
-\CommentTok{\# count the frequency of each remaining word}
-\CommentTok{\# arrange the word counts in descending order for easier interpretation}
-\NormalTok{coal\_context }\OtherTok{\textless{}{-}}\NormalTok{ hansard\_coal }\SpecialCharTok{\%\textgreater{}\%} \CommentTok{\# create a new data frame }
-  \FunctionTok{unnest\_tokens}\NormalTok{(word, text) }\SpecialCharTok{\%\textgreater{}\%} \CommentTok{\# tokenize text}
-  \FunctionTok{anti\_join}\NormalTok{(stop\_words) }\SpecialCharTok{\%\textgreater{}\%} \CommentTok{\# remove stop words}
-  \FunctionTok{filter}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{str\_detect}\NormalTok{(word, }\StringTok{"[:digit:]"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%} \CommentTok{\# remove tokens with digits}
-  \FunctionTok{count}\NormalTok{(word) }\SpecialCharTok{\%\textgreater{}\%} \CommentTok{\# count tokens}
-  \FunctionTok{arrange}\NormalTok{(}\FunctionTok{desc}\NormalTok{(n)) }\CommentTok{\# sort by frequency}
-\end{Highlighting}
-\end{Shaded}
-
 Instead of running these functions independently, we have chosen to
 chain them together with the pipe, \texttt{\%\textgreater{}\%},
 operator. Using the pipe allows us to use many functions sequentially
@@ -1175,12 +903,6 @@ operator, \texttt{!}, tells R to do the opposite of what the function
 usually does. Using it in the \texttt{filter()} function and preceding
 \texttt{str\_detect()}, we ask to return text, not digits like the dates
 recorded in Hansard.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{head}\NormalTok{(coal\_context)}
-\end{Highlighting}
-\end{Shaded}
 
 \begin{verbatim}
 ##         word   n
@@ -1207,36 +929,17 @@ aesthetics (e.g., axes, colors), and geometric objects (e.g., points,
 lines) to create visualizations. We will use \texttt{ggplot} frequently
 throughout this book.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# select the top 20 most frequent words from the \textquotesingle{}coal\_context\textquotesingle{} dataset}
-\CommentTok{\# this will be used to limit the plot to the most relevant terms}
-\NormalTok{top\_coal }\OtherTok{\textless{}{-}}\NormalTok{ coal\_context }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{top\_n}\NormalTok{(}\DecValTok{20}\NormalTok{)  }\CommentTok{\# top 20 words}
-
-\CommentTok{\# create a horizontal bar chart of word frequencies}
-\CommentTok{\# this visualizes the most common terms in coal{-}related sentences}
-\FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ top\_coal) }\SpecialCharTok{+}  
-  \FunctionTok{geom\_col}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =} \FunctionTok{reorder}\NormalTok{(word, n), }\AttributeTok{y =}\NormalTok{ n), }\CommentTok{\# bar chart with reordered x{-}axis}
-           \AttributeTok{fill =} \StringTok{"steel blue"}\NormalTok{) }\SpecialCharTok{+} \CommentTok{\# set bar color}
-  \FunctionTok{coord\_flip}\NormalTok{() }\SpecialCharTok{+} \CommentTok{\# flip for horizontal layout}
-  \FunctionTok{labs}\NormalTok{(}\AttributeTok{title =} \StringTok{"Top Words from Sentences Mentioning Coal"}\NormalTok{, }\CommentTok{\# add title}
-       \AttributeTok{subtitle =} \StringTok{"From the 1850 Hansard debates"}\NormalTok{, }\CommentTok{\# add subtitle}
-       \AttributeTok{x =} \StringTok{"Word"}\NormalTok{, }\CommentTok{\# x{-}axis label}
-       \AttributeTok{y =} \StringTok{"Count"}\NormalTok{) }\CommentTok{\# y{-}axis label}
-\end{Highlighting}
-\end{Shaded}
-
 \begin{figure}
 \includegraphics[width=0.8\linewidth]{ch1-11.25.2024_files/figure-latex/visualize_coal_context-1} \caption{Top words in sentences mentioning coal (Hansard, 1850)}\label{fig:visualize_coal_context}
 \end{figure}
 
-The resulting bar chart shows us the number of times ``coal'' was
-mentioned, as well as the top words that appear with coal. Note that
-because we are analyzing collocates, these counts do not reflect the
-total number of times they were mentioned between 1850 to 1859. Instead,
-the counts represent the total number of times these words appear in the
-same context as ``coal.''
+Figure 1.1 displays the results of our code: a bar chart showing how
+many times ``coal'' was mentioned, along with the most frequent words
+that co-occur with the term. Note that because we are analyzing
+collocates, these counts do not reflect the total number of times they
+were mentioned between 1850 to 1859. Instead, the counts represent the
+total number of times these words appear in the same context as
+``coal.''
 
 The second most frequent word is ``steam'' followed by ``duties,''
 ``bill,'' and ``mines.'' Words like ``duty,'' ``iron,'' ``tax,'' and
@@ -1267,26 +970,6 @@ Working-class demands for cheap bread led to the repeal of the Corn Laws
 in 1846. Knowledge of these facts might lead us to ask: were coal and
 corn debated using the same language or different words?
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# filter the dataset to include only rows where the word "corn" appears as a whole word}
-\CommentTok{\# tokenize the filtered text into individual lowercase words}
-\CommentTok{\# remove stop words that carry little semantic weight}
-\CommentTok{\# exclude any tokens containing digits (e.g., "1850", "2nd")}
-\CommentTok{\# count the frequency of each remaining word}
-\CommentTok{\# sort the words in descending order of frequency}
-\NormalTok{corn\_context }\OtherTok{\textless{}{-}}\NormalTok{ hansard\_1850 }\SpecialCharTok{\%\textgreater{}\%} \CommentTok{\# create a new data frame}
-  \FunctionTok{filter}\NormalTok{(}\FunctionTok{str\_detect}\NormalTok{(text, }\StringTok{"}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{bcorn}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{b"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%} \CommentTok{\# filter rows with \textquotesingle{}corn\textquotesingle{} as a whole word}
-  \FunctionTok{unnest\_tokens}\NormalTok{(word, text) }\SpecialCharTok{\%\textgreater{}\%} \CommentTok{\# tokenize text}
-  \FunctionTok{anti\_join}\NormalTok{(stop\_words) }\SpecialCharTok{\%\textgreater{}\%} \CommentTok{\# remove stop words}
-  \FunctionTok{filter}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{str\_detect}\NormalTok{(word, }\StringTok{"[:digit:]"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%} \CommentTok{\# remove tokens with digits}
-  \FunctionTok{count}\NormalTok{(word) }\SpecialCharTok{\%\textgreater{}\%} \CommentTok{\# count word frequency}
-  \FunctionTok{arrange}\NormalTok{(}\FunctionTok{desc}\NormalTok{(n)) }\CommentTok{\# sort by frequency}
-
-\FunctionTok{head}\NormalTok{(corn\_context)}
-\end{Highlighting}
-\end{Shaded}
-
 \begin{verbatim}
 ##      word    n
 ## 1    corn 2085
@@ -1301,32 +984,13 @@ Already we can see the words that most frequently co-occurred with our
 keyword ``corn.'' Visualizing the top 20 words using \texttt{ggplot}
 makes this context easier to apprehend.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# select the 20 most frequent words from the corn{-}related word counts}
-\CommentTok{\# this subset will be used to visualize the most relevant terms}
-\NormalTok{top\_corn }\OtherTok{\textless{}{-}}\NormalTok{ corn\_context }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{top\_n}\NormalTok{(}\DecValTok{20}\NormalTok{)  }\CommentTok{\# top 20 words}
-
-\CommentTok{\# create a horizontal bar plot showing word frequencies}
-\CommentTok{\# this plot highlights the most common words in sentences mentioning "corn"}
-\FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ top\_corn) }\SpecialCharTok{+}
-  \FunctionTok{geom\_col}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =} \FunctionTok{reorder}\NormalTok{(word, n), }\AttributeTok{y =}\NormalTok{ n), }\CommentTok{\# draw bars sorted by count}
-           \AttributeTok{fill =} \StringTok{"steel blue"}\NormalTok{) }\SpecialCharTok{+} \CommentTok{\# set bar color}
-  \FunctionTok{coord\_flip}\NormalTok{() }\SpecialCharTok{+} \CommentTok{\# flip axes for horizontal bars}
-  \FunctionTok{labs}\NormalTok{(}\AttributeTok{title =} \StringTok{"Top Words Occurring in Sentences Mentioning Corn"}\NormalTok{, }\CommentTok{\# add title}
-       \AttributeTok{subtitle =} \StringTok{"From the 1850 Hansard debates"}\NormalTok{, }\CommentTok{\# add subtitle}
-       \AttributeTok{x =} \StringTok{"Word"}\NormalTok{, }\CommentTok{\# x{-}axis label}
-       \AttributeTok{y =} \StringTok{"Count"}\NormalTok{) }\CommentTok{\# y{-}axis label}
-\end{Highlighting}
-\end{Shaded}
-
 \begin{figure}
 \includegraphics[width=0.8\linewidth]{ch1-11.25.2024_files/figure-latex/visualize_corn_context-1} \caption{Top words in sentences mentioning corn (Hansard, 1850)}\label{fig:visualize_corn_context}
 \end{figure}
 
-Comparison between the words used in the context of coal and corn gives
-us a foothold for beginning to think about how taxation was discussed in
+Comparison between Figure 1.1, the words used in the context of coal,
+and Figure 1.2, the words used in the context of coal, gives us a
+foothold for beginning to think about how taxation was discussed in
 different contexts. For instance, the context of both keywords reference
 the role of ``time'', ``duties'', ``taxes'', and the ``government'', but
 debates over corn are more linked to the question of Britain's
@@ -1384,15 +1048,6 @@ that contains information about dates, called
 \texttt{debate\_metadata\_1850}, and join it with the dataset containing
 the debates, \texttt{hansard\_1850}.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# Load the debate metadata for 1850}
-\FunctionTok{data}\NormalTok{(}\StringTok{"debate\_metadata\_1850"}\NormalTok{)}
-
-\FunctionTok{head}\NormalTok{(debate\_metadata\_1850)}
-\end{Highlighting}
-\end{Shaded}
-
 \begin{verbatim}
 ##   sentence_id speechdate                       debate
 ## 1 S3V0108P0_0 1850-01-31       MEETING OF PARLIAMENT.
@@ -1407,26 +1062,6 @@ We will cover joins in greater detail in Chapter 2. For now it's just
 important to know that we are using our unique ID,
 \texttt{sentence\_id}, to join the two data frames together so that the
 speeches are aligned with their correct dates.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# Merge the hansard\_1850 text data with its corresponding metadata}
-\CommentTok{\# using a left join to keep all rows from hansard\_1850}
-\NormalTok{hansard\_1850\_with\_metadata }\OtherTok{\textless{}{-}} \FunctionTok{left\_join}\NormalTok{(hansard\_1850, debate\_metadata\_1850)}
-
-\NormalTok{hansard\_1850\_with\_metadata }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{head}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{text =} \FunctionTok{str\_trunc}\NormalTok{(text, }\DecValTok{120}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}   \CommentTok{\# optional: shorten long lines}
-  \FunctionTok{kable}\NormalTok{(}\AttributeTok{format =} \StringTok{"latex"}\NormalTok{, }
-        \AttributeTok{booktabs =} \ConstantTok{TRUE}\NormalTok{,}
-        \AttributeTok{caption =} \StringTok{"Excerpt from the 1850 Hansard corpus showing sentence{-}level }
-\StringTok{                  text joined with debate{-}level metadata, including speech dates }
-\StringTok{                  and debate titles."}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{kable\_styling}\NormalTok{(}\AttributeTok{full\_width =} \ConstantTok{FALSE}\NormalTok{, }\AttributeTok{position =} \StringTok{"left"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{column\_spec}\NormalTok{(}\DecValTok{2}\NormalTok{, }\AttributeTok{width =} \StringTok{"6cm"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{column\_spec}\NormalTok{(}\DecValTok{4}\NormalTok{, }\AttributeTok{width =} \StringTok{"4cm"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
 
 \begin{table}
 
@@ -1453,15 +1088,6 @@ In the following code we filter for speech dates that are on or after
 and on or before (less than or equal to \texttt{\textless{}=}) February
 28, 1850.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# Filter the dataset to include only speeches from February 1850}
-\NormalTok{top\_month }\OtherTok{\textless{}{-}}\NormalTok{ hansard\_1850\_with\_metadata }\SpecialCharTok{\%\textgreater{}\%} \CommentTok{\# create a new data frame}
-  \FunctionTok{filter}\NormalTok{(speechdate }\SpecialCharTok{\textgreater{}=} \StringTok{"1850{-}02{-}01"}\NormalTok{, }\CommentTok{\# filter}
-\NormalTok{         speechdate }\SpecialCharTok{\textless{}=} \StringTok{"1850{-}02{-}28"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
 KWIC returns a concordance-style text output with the words that come
 directly before and after the keyword in a sentence. Quanteda's version
 of \texttt{KWIC()} uses a different approach from \texttt{tidyverse}. It
@@ -1474,47 +1100,8 @@ number of words to display before and after the keyword, and we can also
 tell \texttt{KWIC()} to do a case insensitive match so that we match
 with uppercase or lowercase instances of our keyword.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# load the quanteda package}
-\FunctionTok{library}\NormalTok{(}\StringTok{"quanteda"}\NormalTok{)}
-
-\CommentTok{\# convert the filtered february 1850 dataset into a quanteda corpus object}
-\CommentTok{\# specify that the \textquotesingle{}text\textquotesingle{} column contains the actual speech content}
-\NormalTok{my\_corpus }\OtherTok{\textless{}{-}} \FunctionTok{corpus}\NormalTok{(top\_month, }\AttributeTok{text\_field =} \StringTok{"text"}\NormalTok{) }
-
-\CommentTok{\# search for instances of the word "corn" in the corpus}
-\CommentTok{\# extract 5 words before and after each occurrence}
-\CommentTok{\# make the search case{-}insensitive so it matches "corn", "Corn", etc.}
-\NormalTok{corn\_kwic }\OtherTok{\textless{}{-}} \FunctionTok{kwic}\NormalTok{(}\FunctionTok{tokens}\NormalTok{(my\_corpus), }\CommentTok{\# tokenize corpus}
-                  \StringTok{"corn"}\NormalTok{, }\CommentTok{\# keyword to search}
-                  \AttributeTok{window =} \DecValTok{5}\NormalTok{, }\CommentTok{\# number of words before/after}
-                  \AttributeTok{case\_insensitive =} \ConstantTok{TRUE}\NormalTok{) }\CommentTok{\# match regardless of case}
-\end{Highlighting}
-\end{Shaded}
-
 We can convert our KWIC results into a regular data frame and display
 them using \texttt{kable()}, which formats the table neatly.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{corn\_df }\OtherTok{\textless{}{-}} \FunctionTok{as.data.frame}\NormalTok{(corn\_kwic)}
-
-\CommentTok{\# Wrap long contexts so they don\textquotesingle{}t overflow}
-\NormalTok{corn\_df }\OtherTok{\textless{}{-}}\NormalTok{ corn\_df }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{pre =} \FunctionTok{str\_wrap}\NormalTok{(pre, }\AttributeTok{width =} \DecValTok{40}\NormalTok{),}
-         \AttributeTok{keyword =} \FunctionTok{str\_wrap}\NormalTok{(keyword, }\AttributeTok{width =} \DecValTok{10}\NormalTok{),}
-         \AttributeTok{post =} \FunctionTok{str\_wrap}\NormalTok{(post, }\AttributeTok{width =} \DecValTok{40}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{select}\NormalTok{(}\SpecialCharTok{{-}}\FunctionTok{c}\NormalTok{(docname, from, to, pattern))}
-
-\NormalTok{corn\_df }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{head}\NormalTok{(}\DecValTok{15}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{kable}\NormalTok{(}\AttributeTok{format =} \StringTok{"latex"}\NormalTok{, }
-        \AttributeTok{booktabs =} \ConstantTok{TRUE}\NormalTok{, }
-        \AttributeTok{align =} \StringTok{"l"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{kable\_styling}\NormalTok{(}\AttributeTok{latex\_options =} \FunctionTok{c}\NormalTok{(}\StringTok{"hold\_position"}\NormalTok{, }\StringTok{"scale\_down"}\NormalTok{))}
-\end{Highlighting}
-\end{Shaded}
 
 \begin{table}[!h]
 \centering
@@ -1582,99 +1169,34 @@ charts above offers the beginnings of a nuanced analysis of overlapping
 terms used by British members of parliament to refer to people and
 forces from beyond Britain.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# define a function to generate a bar plot of top words that co{-}occur with a given keyword}
-\CommentTok{\# filters the dataset for rows containing the keyword as a whole word}
-\CommentTok{\# tokenizes the text, removes stop words and numeric tokens}
-\CommentTok{\# keeps the top 20 most frequent words and plots them as a horizontal bar chart}
-\NormalTok{generate\_word\_plot }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(keyword, hansard\_data) \{}
-    
-\NormalTok{    filtered\_hansard\_1850 }\OtherTok{\textless{}{-}}\NormalTok{ hansard\_data }\SpecialCharTok{\%\textgreater{}\%}
-      \FunctionTok{filter}\NormalTok{(}\FunctionTok{str\_detect}\NormalTok{(text, }\FunctionTok{paste0}\NormalTok{(}\StringTok{"}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{b"}\NormalTok{, keyword, }\StringTok{"}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{b"}\NormalTok{))) }\SpecialCharTok{\%\textgreater{}\%} \CommentTok{\# filter rows}
-      \FunctionTok{unnest\_tokens}\NormalTok{(word, text) }\SpecialCharTok{\%\textgreater{}\%} \CommentTok{\# tokenize text}
-      \FunctionTok{anti\_join}\NormalTok{(stop\_words) }\SpecialCharTok{\%\textgreater{}\%} \CommentTok{\# remove stop words}
-      \FunctionTok{filter}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{str\_detect}\NormalTok{(word, }\StringTok{"[:digit:]"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%} \CommentTok{\# remove numeric tokens}
-      \FunctionTok{count}\NormalTok{(word) }\SpecialCharTok{\%\textgreater{}\%} \CommentTok{\# count word frequency}
-      \FunctionTok{top\_n}\NormalTok{(}\DecValTok{20}\NormalTok{) }\CommentTok{\# keep top 20 words}
-    
-\NormalTok{    plot }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(filtered\_hansard\_1850) }\SpecialCharTok{+} \CommentTok{\# create a new dataset for the plot                       }
-      \FunctionTok{geom\_col}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =} \FunctionTok{reorder}\NormalTok{(word, n), }\AttributeTok{y =}\NormalTok{ n), }\CommentTok{\# bar chart ordered by count}
-               \AttributeTok{fill =} \StringTok{"steel blue"}\NormalTok{) }\SpecialCharTok{+} \CommentTok{\# set bar color}
-      \FunctionTok{coord\_flip}\NormalTok{() }\SpecialCharTok{+} \CommentTok{\# horizontal bars}
-      \FunctionTok{labs}\NormalTok{(}\AttributeTok{title =} \FunctionTok{paste}\NormalTok{(}\StringTok{"Top Words Occurring in Sentences Mentioning"}\NormalTok{, }
-                         \FunctionTok{toupper}\NormalTok{(keyword)), }\CommentTok{\# plot title}
-           \AttributeTok{subtitle =} \StringTok{"From the 1850 Hansard debates"}\NormalTok{, }\CommentTok{\# plot subtitle}
-           \AttributeTok{x =} \StringTok{"Word"}\NormalTok{, }\CommentTok{\# x{-}axis label}
-           \AttributeTok{y =} \StringTok{"Count"}\NormalTok{) }\CommentTok{\# y{-}axis label}
-    
-    \FunctionTok{print}\NormalTok{(plot) \} }\CommentTok{\# display the plot}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# use our function to create a clean bar plot of the top 20 words in sentences }
-\CommentTok{\# mentioning the word "foreign"}
-\FunctionTok{generate\_word\_plot}\NormalTok{(}\StringTok{"foreign"}\NormalTok{, hansard\_1850)}
-\end{Highlighting}
-\end{Shaded}
-
 \begin{figure}
 \includegraphics[width=0.8\linewidth]{ch1-11.25.2024_files/figure-latex/generate_plot_foreign-1} \caption{Top words in sentences mentioning foreign (Hansard, 1850)}\label{fig:generate_plot_foreign}
 \end{figure}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# do the same for sentences that mention the word "colonial"}
-\FunctionTok{generate\_word\_plot}\NormalTok{(}\StringTok{"colonial"}\NormalTok{, hansard\_1850)}
-\end{Highlighting}
-\end{Shaded}
 
 \begin{figure}
 \includegraphics[width=0.8\linewidth]{ch1-11.25.2024_files/figure-latex/generate_plot_colonial-1} \caption{Top words in sentences mentioning colonial (Hansard, 1850)}\label{fig:generate_plot_colonial}
 \end{figure}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# do the same for sentences that mention the word "savage"}
-\FunctionTok{generate\_word\_plot}\NormalTok{(}\StringTok{"savage"}\NormalTok{, hansard\_1850)}
-\end{Highlighting}
-\end{Shaded}
-
 \begin{figure}
 \includegraphics[width=0.8\linewidth]{ch1-11.25.2024_files/figure-latex/generate_plot_savage-1} \caption{Top words in sentences mentioning savage (Hansard, 1850)}\label{fig:generate_plot_savage}
 \end{figure}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# do the same for sentences that mention the word "native"}
-\FunctionTok{generate\_word\_plot}\NormalTok{(}\StringTok{"native"}\NormalTok{, hansard\_1850)}
-\end{Highlighting}
-\end{Shaded}
 
 \begin{figure}
 \includegraphics[width=0.8\linewidth]{ch1-11.25.2024_files/figure-latex/generate_plot_native-1} \caption{Top words in sentences mentioning native (Hansard, 1850)}\label{fig:generate_plot_native}
 \end{figure}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# do the same for sentences that mention the word "barbarian"}
-\FunctionTok{generate\_word\_plot}\NormalTok{(}\StringTok{"barbarian"}\NormalTok{, hansard\_1850)}
-\end{Highlighting}
-\end{Shaded}
-
 \begin{figure}
 \includegraphics[width=0.8\linewidth]{ch1-11.25.2024_files/figure-latex/generate_plot_barbarian-1} \caption{Top words in sentences mentioning barbarian (Hansard, 1850)}\label{fig:generate_plot_barbarian}
 \end{figure}
 
-Producing many graphs in succession can be useful for exploratory data
-analysis. Performing a comparative analysis of graphs side-by-side is
-one of the main skills digital humanists use when considering the subtle
-structures of meaning and difference that define cultural and political
-conversations. A careful comparison between the charts above offers the
-beginnings of a nuanced analysis of overlapping terms used by British
-members of parliament to refer to people and forces from beyond Britain.
+Producing many graphs in succession (as demonstrated by Figures 1.3 to
+1.7) can be useful for exploratory data analysis. Performing a
+comparative analysis of graphs side-by-side is one of the main skills
+digital humanists use when considering the subtle structures of meaning
+and difference that define cultural and political conversations. A
+careful comparison between the charts above offers the beginnings of a
+nuanced analysis of overlapping terms used by British members of
+parliament to refer to people and forces from beyond Britain.
 
 In the results, we see several closely related terms which compose a
 field of interrelated meanings. Together, these terms sketch out the
@@ -1762,18 +1284,6 @@ Analyzing the entire data frame to further inspect the data can be
 distracting since a data frame usually contains multiple columns, some
 which may be irrelevant to our current query.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{hansard\_1850\_with\_metadata }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{head}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{text =} \FunctionTok{str\_trunc}\NormalTok{(text, }\DecValTok{120}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}   \CommentTok{\# optional: shorten long lines}
-  \FunctionTok{kable}\NormalTok{(}\AttributeTok{format =} \StringTok{"latex"}\NormalTok{, }
-        \AttributeTok{booktabs =} \ConstantTok{TRUE}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{kable\_styling}\NormalTok{(}\AttributeTok{full\_width =} \ConstantTok{FALSE}\NormalTok{, }\AttributeTok{position =} \StringTok{"left"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{column\_spec}\NormalTok{(}\DecValTok{2}\NormalTok{, }\AttributeTok{width =} \StringTok{"4cm"}\NormalTok{)    }\CommentTok{\# wrap the "text" column}
-\end{Highlighting}
-\end{Shaded}
-
 \begin{tabular}{l>{\raggedright\arraybackslash}p{4cm}ll}
 \toprule
 sentence\_id & text & speechdate & debate\\
@@ -1800,13 +1310,6 @@ look at. The structure of the syntax is this:
 ``row'' field tells R to display rows 1 to 10. We put ``2'' in the
 ``column'' field to tell R to display just the second column, which in
 this case is the column containing text.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# view rows 1 to 10 from the 2nd column of the hansard\_1850 dataset}
-\NormalTok{hansard\_1850[}\DecValTok{1}\SpecialCharTok{:}\DecValTok{10}\NormalTok{, }\DecValTok{2}\NormalTok{]}
-\end{Highlighting}
-\end{Shaded}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 0\tabcolsep) * \real{1.0000}}@{}}
@@ -1857,13 +1360,6 @@ misunderstood. \\
 Some of the rows in the ``text'' field appear not to be complete
 sentences. We can investigate this oddity further.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# view the first row from the 2nd column of the hansard\_1850 dataset}
-\NormalTok{hansard\_1850[}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{]}
-\end{Highlighting}
-\end{Shaded}
-
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 0\tabcolsep) * \real{1.0000}}@{}}
 \toprule\noalign{}
@@ -1902,13 +1398,6 @@ such as ``business.''
 
 Let's keep inspecting the data, this time turning to the third row in
 our dataset.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# view the third row from the 2nd column of the hansard\_1850 dataset}
-\NormalTok{hansard\_1850[}\DecValTok{3}\NormalTok{, }\DecValTok{2}\NormalTok{]}
-\end{Highlighting}
-\end{Shaded}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 0\tabcolsep) * \real{1.0000}}@{}}
@@ -1982,53 +1471,551 @@ reading. But we should be wary making inferences about any kind of
 inquiry where there is a risk of overlap between substantive discussions
 and journalistic observation.
 
-\subsection{Exercises}\label{exercises}
+\section{\texorpdfstring{\textbf{\emph{Exercises}}}{Exercises}}\label{exercises}
 
 Expand your grasp of the code and your powers of critical reflection by
 trying the following exercises:
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi})}
+\subsection{1) Alter the code above to compare the context for the
+keywords ``girl'' and ``woman.'' Do you expect the context to be similar
+for both? Does anything surprise you about the
+results?}\label{alter-the-code-above-to-compare-the-context-for-the-keywords-girl-and-woman.-do-you-expect-the-context-to-be-similar-for-both-does-anything-surprise-you-about-the-results}
+
+\begin{verbatim}
+##       word   n
+## 1  husband 237
+## 2      law 181
+## 3  married 163
+## 4 marriage 154
+## 5     wife 145
+## 6 adultery 143
+\end{verbatim}
+
+\includegraphics[width=0.8\linewidth]{ch1-11.25.2024_files/figure-latex/find_woman_context-1}
+
+\begin{verbatim}
+##     word  n
+## 1    age 12
+## 2    boy 11
+## 3 church  8
+## 4   poor  8
+## 5   time  8
+## 6    law  6
+\end{verbatim}
+
+\includegraphics[width=0.8\linewidth]{ch1-11.25.2024_files/figure-latex/find_girl_context-1}
+
+\paragraph{I expected overlap because both words refer to women and
+girls, but there is a more significant difference in keywords for girl
+and woman than I thought. ``Woman'' in general appears much more
+frequently than girl, and is mentioned more in the context of adult
+status, legal status, and marriage, with top words like ``husband'' and
+``wife.'' This suggested that women was often discussed through their
+relationships to men and and within family
+roles.}\label{i-expected-overlap-because-both-words-refer-to-women-and-girls-but-there-is-a-more-significant-difference-in-keywords-for-girl-and-woman-than-i-thought.-woman-in-general-appears-much-more-frequently-than-girl-and-is-mentioned-more-in-the-context-of-adult-status-legal-status-and-marriage-with-top-words-like-husband-and-wife.-this-suggested-that-women-was-often-discussed-through-their-relationships-to-men-and-and-within-family-roles.}
+
+\paragraph{Meanwhile ``Girl'' leans into two rather different contexts.
+As expected, we see words related to childhood such as ``boy'' and
+``schools'' But I was surprised to see ``girl'' also mentioned more in
+work context, like with ``workhouse'' and ``factory.'' This sadly
+implies that girls were not just seen and discussed as children, but
+were subject to child labor and often discussed in relation to it. I was
+most surprised to see the words ``unfortunate'' and ``consequence'' pop
+up in the context of ``girl'', which implies that girls were likely
+framed as victims as
+explotation.}\label{meanwhile-girl-leans-into-two-rather-different-contexts.-as-expected-we-see-words-related-to-childhood-such-as-boy-and-schools-but-i-was-surprised-to-see-girl-also-mentioned-more-in-work-context-like-with-workhouse-and-factory.-this-sadly-implies-that-girls-were-not-just-seen-and-discussed-as-children-but-were-subject-to-child-labor-and-often-discussed-in-relation-to-it.-i-was-most-surprised-to-see-the-words-unfortunate-and-consequence-pop-up-in-the-context-of-girl-which-implies-that-girls-were-likely-framed-as-victims-as-explotation.}
+
+\section{2) Use your powers of inspecting data to move from the keyword
+context back to the individual sentences. Cut and paste twenty sentences
+from the context of each keyword into a word processor. What do you
+learn from these sentences that you did not learn from counting
+keywords? Does your analysis become more persuasive when quantitative
+graphs are accompanied with readings of particular speeches where the
+words are examined in their original
+context?}\label{use-your-powers-of-inspecting-data-to-move-from-the-keyword-context-back-to-the-individual-sentences.-cut-and-paste-twenty-sentences-from-the-context-of-each-keyword-into-a-word-processor.-what-do-you-learn-from-these-sentences-that-you-did-not-learn-from-counting-keywords-does-your-analysis-become-more-persuasive-when-quantitative-graphs-are-accompanied-with-readings-of-particular-speeches-where-the-words-are-examined-in-their-original-context}
+
+\begin{longtable}[t]{ll}
+\caption{\label{tab:woman_sentences_table}Twenty Full Sentences Containing 'Woman'}\\
+\toprule
+doc\_id & text\\
+\midrule
+doc1495 & One innocent young woman, who resisted his proposals, and
+complained of his conduct to the captain, was taken upon
+deck, and buckets of water were thrown upon her.\\
+doc1501 & Now, after the publication of such a statement as that of
+which he had given their Lordships the substance, was it
+likely that any virtuous and well-conducted woman would
+trust herself on board of a vessel if she was not sure of
+protection?\\
+doc2121 & An old woman of seventy was murdered, and the scull of an
+idiot was beaten in with the butts of their muskets. ""\\
+doc2123 & My noble Friend seems to doubt this; but Mr. Janns,
+sub-inspector of police, stales, in his evidence, that the
+scull of the unfortunate Sweeny was beaten in with the butts
+of their muskets, and that corresponds with the account
+given before the coroner, Mr. Berwick goes on to say—
+""Another old woman was severely beaten in her house; while
+another, who was subsequently saved by the police, was much
+injured, and left in her house, which had been set on fire.\\
+doc3384 & I fully concur in the sentiment that Her late Majesty had
+justly endeared Herself to this country by Her piety, her
+charities, and Her exemplary virtues, and that Her name will
+be long held in grateful remembrance by every man, woman,
+and child in this kingdom.\\
+\addlinespace
+doc5135 & There is not a man, woman, or child who has not an interest
+in the question; and if you were to put on a duty which you
+would say would raise the price of corn one shilling, or
+eighteenpence, or two shillings the bushel, every man would
+count the shilling, or eighteenpence, or two shillings of
+wheat which he would have to pay for the support of his
+family in addition to that which he pays at the present day.\\
+doc8799 & but I, a woman, a wife, a mother, in my own native town,
+before the people, who were accustomed to treat me with
+respect, was dragged into a square of soldiers, and there I
+was scourged with rods, ""\\
+doc11026 & But then the clause went on to enact as follows:— ""And when
+the opinion of the court is desired in any matter in which
+any infant, idiot, lunatic, married woman, or any person
+uncertain, unknown, or not to be found, is interested, it
+shall be lawful for the Master of the court in rotation to
+direct the presenting of such petition by way of special
+case, on behalf of the infant, idiot, lunatic, married
+woman, or such other person, and such direction of the
+Master shall be conclusive to all intents and purposes. ""\\
+doc18763 & Now, the Emigration Commissioners were so satisfied of the
+danger and difficulty of sending out single women, that it
+had long been their practice to discourage their going; nor
+would they allow a single woman to embark on board one of
+their vessels unless she had some one with her who could
+protect her, except in the case of vessels chartered for
+such persons as those from the Irish workhouses; and the
+abuses that took place there were through the scandalous
+fraud sanctioned by the Irish board of guardians, with whose
+direct cognisance the master of the work-house substituted
+some improper characters to answer to the names of those who
+were to have\\
+doc20595 & He had also cohabited with the wife of another passenger
+(recently married) and with other women, and at Nelson he
+left the ship, and continued to live in open adultery with
+the married woman. ""\\
+\addlinespace
+doc22929 & Even to this day we found in the Asiatic nations that
+wherever the law regulating the intercourse between man and
+woman was of a low description, the morals of the people
+were proportionately low.\\
+doc26889 & A lieutenant-general in the Army had married a lady, and
+then married her aunt; he then married another woman, and
+afterwards her niece (the niece of the third wife).\\
+doc26961 & No one would deny that second marriages were permitted; but
+before a first marriage, a man had ample time to see which
+member of a family of sisters was best suited to him, and he
+knew that if he lost her the whole world was open before him
+to choose any woman, except her sister, to supply her place.\\
+doc27054 & There was all the gentleness of woman, with all her
+kindliness, all the emotions which could be introduced into
+the relationship, without any of the sensual feelings by
+which the highest feelings of affection between the sexes
+were tarnished.\\
+doc27061 & At the time of his marriage, he felt perfect safety against
+any mishaps arising from the connection; at the time he
+married he loved the woman whom he made his wife; he was now
+made a member of a family, with, say, three other sisters,
+young and perhaps beautiful, loving him because of the
+connection which subsisted between their sister and himself.\\
+\addlinespace
+doc27262 & He had explained the reasons why the people of this country
+regarded marriage with a sister-in-law in a not unfavourable
+light; but it had been asked why the friends of the Bill
+did not advocate the marriage of a woman with two brothers
+in succession, or the marriage of an uncle with his wife's
+niece?\\
+doc27287 & He could conceive no point of more importance, especially to
+women, than an unreserved intimacy between a married woman
+and her unmarried sister.\\
+doc27295 & There was no case in which a woman would more require the
+solace and society of an unmarried sister than when her own
+health was failing.\\
+doc27297 & He could not but apprehend, also, that if this Bill were to
+pass, a married woman might, either from a mistaken regard
+for her husband, or out of affection for her children, exact
+in some cases a promise on her death-bed from her husband,
+that he would marry her sister, even when there was no
+affection between the parties.\\
+doc27374 & He did not believe that a young unmarried woman could live
+in a house with a young widower where there were no ties of
+blood to revolt against any feeling of attachment, without
+being open to a certain amount of observation.\\
+\bottomrule
+\end{longtable}
+
+\begin{longtable}[t]{ll}
+\caption{\label{tab:girl_sentences_table}Twenty Full Sentences Containing 'Girl'}\\
+\toprule
+doc\_id & text\\
+\midrule
+doc2120 & Mr. Fitzmaurice stopped a man in the act of firing at a girl
+who was rushing from her father's house.\\
+doc18712 & Among these girl"" were twelve girls from a foundling
+institution in Dublin, one of whom, a very interesting
+girl too, was seduced by the chief officer, and died in
+consequence of miscarriage before she could be landed from
+the vessel.\\
+doc20594 & The first mate of the had seduced and got with child a girl
+scarcely 15 years of age, a daughter of a cabin passenger.\\
+doc21161 & At all events, the girl lost her life.\\
+doc21164 & Under the seventh charge it was alleged that the captain
+had failed to prevent unrestricted intercourse between the
+officers and sailors and the females on board; that he had
+taken one girl to wait upon himself, and that she had died
+from the effects of miscarriage before the arrival of the
+ship at her destinat\\
+\addlinespace
+doc21165 & Another girl was named who had been debauched during the
+voyage, and who was then an inmate of a notorious brothel
+in the colony; and another, who also had waited upon the
+captain, had been seen in a situation which left no doubt
+that she also was receiving the wages of prostitution.\\
+doc21167 & Now, he wanted to know had any inquiry taken place into the
+death of the unfortunate orphan girl?\\
+doc21659 & In the National schools in London and the neighbourhood,
+there were three boys educated to two girls; but in the
+British and Foreign schools in the metropolis and its
+neighbourhood, there was only one girl to two boys.\\
+doc33352 & One girl who lived at no great distance from the factory
+stated that she went home again, and got into bed until she
+was wanted again at the factory.\\
+doc33353 & Another girl, who walked some miles to her work, said she
+was obliged to spend her time in an eating-house until her
+hour for resuming work in the factory arrived.\\
+\addlinespace
+doc39260 & Two persons were there charged with causing the death of
+a young girl whom they had obtained from the neighbouring
+workhouse at Bideford, in the capacity of a servant.\\
+doc39261 & The treatment this unfortunate girl had received, had
+excited feelings of indignation and horror in the breast
+of every person who had become acquainted with the affair;
+but through some informality or legal technicality in the
+proceedings, the perpetrators of these horrors had totally
+escaped punishment.\\
+doc39262 & In the course of the proceedings an allegation was made,
+or rather not denied, that the master of the workhouse at
+Bideford, Thomas Surnam, bad not only failed to discourage,
+but had actually excited and encouraged, these two
+monsters to further barbarities, if possible, towards this
+unfortunate girl.\\
+doc39263 & So much so, that upon one occasion, when the poor girl was
+unable to carry a pail in consequence of the barbarities
+which had been inflicted upon her, the workhouse master,
+when informed of her inability to do so, brutally said, that
+""that they ought have broken a stick about her back\\
+doc43309 & Member to refer to the inquiry promised by the Poor Law
+Board into the conduct of Mr. Surman, the master of the
+Bideford union workhouse, with reference to the treatment of
+the poor girl whose shocking death had formed the subject of
+a late judicial investigation.\\
+\addlinespace
+doc70529 & The case was inquired into before the board of guardians,
+and they decided that they had already voted that the
+girl was a Presbyterian, and that the matron was perfectly
+justified in dragging her to a Presbyterian\\
+doc71314 & Having the concurrence of the legislature of Sydney, be
+should like to suggest whether it would not be better at
+once to commence a system, which, if carried out, would lead
+to a greater demand for boy as well as girl emigrants from
+the workhouses of this country.\\
+doc75282 & At present a boy or girl under 13 years could be employed
+only six and a half hours each day.\\
+doc97401 & The marriage of an old man with a young girl, of an old
+woman with a youth, of a man who has a family of daughters
+with a woman of bad character, and many others; but the law
+does not interfere to prevent them.\\
+doc98252 & it would be absurd to bring in a Bill to prevent marriage
+between a man of 75 and a girl of 16; but was it not quite
+clear that there was a great difference between marriages
+which were expedient, and marriages which were inces- tuous?\\
+\bottomrule
+\end{longtable}
+
+\paragraph{Reading the original sentences taught me things the keyword
+counts could not; I could see how the terms worked in conjunction with
+other words rather than just seeing how often they show up. Creating
+separate lists for both ``women'' and ``girls'' makes it clear that
+there are vast differences in their contexts. For example, while the
+frequency tables suggest that ``woman'' is tied to marriage, legality,
+and ``protection,'' the sentences show what that protection actually
+means in
+debate.}\label{reading-the-original-sentences-taught-me-things-the-keyword-counts-could-not-i-could-see-how-the-terms-worked-in-conjunction-with-other-words-rather-than-just-seeing-how-often-they-show-up.-creating-separate-lists-for-both-women-and-girls-makes-it-clear-that-there-are-vast-differences-in-their-contexts.-for-example-while-the-frequency-tables-suggest-that-woman-is-tied-to-marriage-legality-and-protection-the-sentences-show-what-that-protection-actually-means-in-debate.}
+
+\paragraph{Women are often mentioned in the context of their
+relationships with men, often as subjects of unwanted advances, as in
+one sentence: ``One innocent young woman, who resisted his proposals,
+and complained of his conduct to the captain, was taken upon deck'' or
+as weak people unable to defend themselves: ``nor would they allow a
+single woman to embark on board one of their vessels unless she had some
+one with her who could protect her.'' We also see how gender traits
+might have been idealized: ``There was all the gentleness of woman ,
+with all her kindliness , all the emotions which could be introduced
+into the
+relationship''}\label{women-are-often-mentioned-in-the-context-of-their-relationships-with-men-often-as-subjects-of-unwanted-advances-as-in-one-sentence-one-innocent-young-woman-who-resisted-his-proposals-and-complained-of-his-conduct-to-the-captain-was-taken-upon-deck-or-as-weak-people-unable-to-defend-themselves-nor-would-they-allow-a-single-woman-to-embark-on-board-one-of-their-vessels-unless-she-had-some-one-with-her-who-could-protect-her.-we-also-see-how-gender-traits-might-have-been-idealized-there-was-all-the-gentleness-of-woman-with-all-her-kindliness-all-the-emotions-which-could-be-introduced-into-the-relationship}
+
+\paragraph{With ``girl,'' the lists talked about schools and labor, but
+the sentences reveal how often girls were discussed through coercion and
+regulation. Surprisingly and rather disturbingly, we see even more
+explicit content regarding sexual advances than with women. One sentence
+describes the impregnation of a girl: ``The first mate of the {[}ship{]}
+had seduced and got with child a girl scarcely 15 years of age, a
+daughter of a cabin passenger'' and later discussion of efforts ``to
+prevent unrestricted intercourse between the officers and sailors and
+the females on board,'' including one man that ``had taken one girl to
+wait upon himself, and that she had died from the effects of
+miscarriage'' Another sentence discusses the limits for youth labor:
+``At present a boy or girl under 13 years could be employed only six and
+a half hours each day.'' This comparison reveals that while ``women''
+were discussed more as subjects of legal protection, ``girls'' were
+often discussed as victims of physical or systemic exploitation, through
+labor and
+seduction.}\label{with-girl-the-lists-talked-about-schools-and-labor-but-the-sentences-reveal-how-often-girls-were-discussed-through-coercion-and-regulation.-surprisingly-and-rather-disturbingly-we-see-even-more-explicit-content-regarding-sexual-advances-than-with-women.-one-sentence-describes-the-impregnation-of-a-girl-the-first-mate-of-the-ship-had-seduced-and-got-with-child-a-girl-scarcely-15-years-of-age-a-daughter-of-a-cabin-passenger-and-later-discussion-of-efforts-to-prevent-unrestricted-intercourse-between-the-officers-and-sailors-and-the-females-on-board-including-one-man-that-had-taken-one-girl-to-wait-upon-himself-and-that-she-had-died-from-the-effects-of-miscarriage-another-sentence-discusses-the-limits-for-youth-labor-at-present-a-boy-or-girl-under-13-years-could-be-employed-only-six-and-a-half-hours-each-day.-this-comparison-reveals-that-while-women-were-discussed-more-as-subjects-of-legal-protection-girls-were-often-discussed-as-victims-of-physical-or-systemic-exploitation-through-labor-and-seduction.}
+
+\section{\texorpdfstring{3) We have examined `coal' and `corn' in the
+1850s. Now, search for the words `coal' and `corn' in dataset
+\texttt{hansard\_1820}. Were they being used in the same way? What
+changed?}{3) We have examined `coal' and `corn' in the 1850s. Now, search for the words `coal' and `corn' in dataset hansard\_1820. Were they being used in the same way? What changed?}}\label{we-have-examined-coal-and-corn-in-the-1850s.-now-search-for-the-words-coal-and-corn-in-dataset-hansard_1820.-were-they-being-used-in-the-same-way-what-changed}
+
+\begin{verbatim}
+##           word    n
+## 1        price 1166
+## 2      foreign  633
+## 3      country  601
+## 4         duty  345
+## 5         laws  300
+## 6        trade  288
+## 7  importation  278
+## 8       market  255
+## 9       prices  225
+## 10     measure  210
+## 11       house  186
+## 12     average  182
+## 13    imported  182
+## 14    quantity  172
+## 15        time  168
+\end{verbatim}
+
+\includegraphics[width=0.8\linewidth]{ch1-11.25.2024_files/figure-latex/corn1820s-1}
+
+\begin{verbatim}
+##           word  n
+## 1       inland 38
+## 2        coals 35
+## 3         duty 33
+## 4       owners 32
+## 5       london 27
+## 6       duties 26
+## 7        trade 22
+## 8          sea 18
+## 9          tax 18
+## 10       mines 16
+## 11      market 15
+## 12       north 15
+## 13    northern 12
+## 14 proprietors 12
+## 15      repeal 12
+\end{verbatim}
+
+\includegraphics[width=0.8\linewidth]{ch1-11.25.2024_files/figure-latex/coal1820-1}
+
+\paragraph{In the 1820s, we see that''corn'' is strongly associated with
+economic regulation and trade policy, with top keywords like ``price,''
+``foreign,'' and ``importation.'' This fits the landscape right after
+the Corn Laws passed in 1815, which kept prices high to protect domestic
+farmers, subsequently causing a lot of economic suffering because it
+meant higher food costs for everyone else. In the 1850s as we saw above,
+we see a shift to words like ``repeal'' ``free'' ``noble'' after the
+corn laws had been repealed in 1846. It makes sense that the 1850s
+debates shift in discussion toward free trade, often framing it in a
+more positive or settled political light than
+before.}\label{in-the-1820s-we-see-thatcorn-is-strongly-associated-with-economic-regulation-and-trade-policy-with-top-keywords-like-price-foreign-and-importation.-this-fits-the-landscape-right-after-the-corn-laws-passed-in-1815-which-kept-prices-high-to-protect-domestic-farmers-subsequently-causing-a-lot-of-economic-suffering-because-it-meant-higher-food-costs-for-everyone-else.-in-the-1850s-as-we-saw-above-we-see-a-shift-to-words-like-repeal-free-noble-after-the-corn-laws-had-been-repealed-in-1846.-it-makes-sense-that-the-1850s-debates-shift-in-discussion-toward-free-trade-often-framing-it-in-a-more-positive-or-settled-political-light-than-before.}
+
+\paragraph{For coal in the 1820s, we see more location-centric and
+transportation terms like ``inland,'' ``north'' and ``London.'' This
+makes sense historically because back before railways became common,
+coal was usually transported in large quantities by ship from Northern
+regions to London. In the 1850s, we see more industrial terms like
+``iron,'' ``steam,'' and ``engine.'' This correlates with how coal had
+evolved as an energy source, from heating homes to fueling engines. By
+the 1850s, steam power and railways were becoming more prominent and
+coal was being used to power steam engines. - making discussions around
+it focused on the industrial role it had taken
+on.}\label{for-coal-in-the-1820s-we-see-more-location-centric-and-transportation-terms-like-inland-north-and-london.-this-makes-sense-historically-because-back-before-railways-became-common-coal-was-usually-transported-in-large-quantities-by-ship-from-northern-regions-to-london.-in-the-1850s-we-see-more-industrial-terms-like-iron-steam-and-engine.-this-correlates-with-how-coal-had-evolved-as-an-energy-source-from-heating-homes-to-fueling-engines.-by-the-1850s-steam-power-and-railways-were-becoming-more-prominent-and-coal-was-being-used-to-power-steam-engines.---making-discussions-around-it-focused-on-the-industrial-role-it-had-taken-on.}
+
+\section{\texorpdfstring{4) Above, we created the list of words called
+\texttt{identifiers\_for\_woman}. Use the operator \texttt{\%in\%} with
+the command \texttt{filter()} to create a list of the words in the
+context of discussions of women. Create another list called
+\texttt{identifiers\_for\_man} and do the same for discussions of men.
+Create visualizations for the top terms used in discussions of men and
+women.}{4) Above, we created the list of words called identifiers\_for\_woman. Use the operator \%in\% with the command filter() to create a list of the words in the context of discussions of women. Create another list called identifiers\_for\_man and do the same for discussions of men. Create visualizations for the top terms used in discussions of men and women.}}\label{above-we-created-the-list-of-words-called-identifiers_for_woman.-use-the-operator-in-with-the-command-filter-to-create-a-list-of-the-words-in-the-context-of-discussions-of-women.-create-another-list-called-identifiers_for_man-and-do-the-same-for-discussions-of-men.-create-visualizations-for-the-top-terms-used-in-discussions-of-men-and-women.}
+
+\begin{verbatim}
+##       word    n
+## 1  husband 1192
+## 2      law  979
+## 3 children  865
+## 4 marriage  825
+## 5     bill  549
+## 6   wife's  529
+\end{verbatim}
+
+\includegraphics[width=0.8\linewidth]{ch1-11.25.2024_files/figure-latex/women_context-1}
+
+\begin{verbatim}
+##            word    n
+## 1       husband 1567
+## 2        father  918
+## 3       brother  891
+## 4          boys  600
+## 5           boy  315
+## 6          male  278
+## 7      brothers  219
+## 8       fathers  182
+## 9      husbands  165
+## 10        males   94
+## 11        uncle   76
+## 12  grandfather   26
+## 13 grandfathers   12
+## 14       uncles    7
+\end{verbatim}
+
+\begin{verbatim}
+##         word    n
+## 1    country 5360
+## 2      house 4874
+## 3 government 3990
+## 4       lord 3118
+## 5       time 2971
+## 6      noble 2787
+\end{verbatim}
+
+\includegraphics[width=0.8\linewidth]{ch1-11.25.2024_files/figure-latex/man_context-1}
+
+\paragraph{We see that compared to women and girls, men-identifier
+sentences skew toward public life and politics, with top context terms
+like ``government,'' ``law,'' ``service,'' and ``public.'' This suggests
+that men were more often framed as political actors and participants in
+state institutions, while women were more often discussed through
+domestic roles, dependency, and legal ``protection'' rather than
+autonomy.}\label{we-see-that-compared-to-women-and-girls-men-identifier-sentences-skew-toward-public-life-and-politics-with-top-context-terms-like-government-law-service-and-public.-this-suggests-that-men-were-more-often-framed-as-political-actors-and-participants-in-state-institutions-while-women-were-more-often-discussed-through-domestic-roles-dependency-and-legal-protection-rather-than-autonomy.}
+
+\section{5) Reflect on your work so far -- in which you have compared
+words for gender, the concept of the foreign, and the context of
+discussions of different commodities. You have made comparisons over
+time and comparisons of lists. Which of the comparisons do you find the
+most productive of insight about how certain words were being used in
+political debate? Are you persuaded by large numbers? Are you persuaded
+by subtle variations in the context of different words? Write a
+paragraph explaining for yourself wherein constitutes the most
+persuasive usage of comparisons between keyword in
+context.}\label{reflect-on-your-work-so-far-in-which-you-have-compared-words-for-gender-the-concept-of-the-foreign-and-the-context-of-discussions-of-different-commodities.-you-have-made-comparisons-over-time-and-comparisons-of-lists.-which-of-the-comparisons-do-you-find-the-most-productive-of-insight-about-how-certain-words-were-being-used-in-political-debate-are-you-persuaded-by-large-numbers-are-you-persuaded-by-subtle-variations-in-the-context-of-different-words-write-a-paragraph-explaining-for-yourself-wherein-constitutes-the-most-persuasive-usage-of-comparisons-between-keyword-in-context.}
+
+\paragraph{We saw that examining sentence contexts for individual
+keywords was more productive than simply counting how many times these
+words appeared.The word counts are useful for showing what topics are
+most prominent, but the context is what reveals the meaning and
+political framing of them. Comparing near-synonyms like ``girl'' vs
+``woman'' was especially insightful because it showed that each term
+carried different assumptions about age, vulnerability, and social role.
+Comparing words across time, like ``corn'' in the 1820s vs the 1850s,
+made it clear how historical conditions, laws, and policy debates
+reshaped the language surrounding the same entity. Visualizing these
+comparisons helps because we can see these patterns and subtle
+differences upfront, but the most convincing analysis combines the
+graphs with a few representative sentences, showing how the quantitative
+results we get are rooted in real
+writing.}\label{we-saw-that-examining-sentence-contexts-for-individual-keywords-was-more-productive-than-simply-counting-how-many-times-these-words-appeared.the-word-counts-are-useful-for-showing-what-topics-are-most-prominent-but-the-context-is-what-reveals-the-meaning-and-political-framing-of-them.-comparing-near-synonyms-like-girl-vs-woman-was-especially-insightful-because-it-showed-that-each-term-carried-different-assumptions-about-age-vulnerability-and-social-role.-comparing-words-across-time-like-corn-in-the-1820s-vs-the-1850s-made-it-clear-how-historical-conditions-laws-and-policy-debates-reshaped-the-language-surrounding-the-same-entity.-visualizing-these-comparisons-helps-because-we-can-see-these-patterns-and-subtle-differences-upfront-but-the-most-convincing-analysis-combines-the-graphs-with-a-few-representative-sentences-showing-how-the-quantitative-results-we-get-are-rooted-in-real-writing.}
+
+\section{6) For the visualizations of the terms associated with
+different terms for the ``foreign,'' tell us: What biases does each term
+convey? Where do the terms overlap? What new information is encapsulated
+by some words but not others? What do we learn from this exercise about
+the prejudices of Britain's members of parliament in the
+1850s?}\label{for-the-visualizations-of-the-terms-associated-with-different-terms-for-the-foreign-tell-us-what-biases-does-each-term-convey-where-do-the-terms-overlap-what-new-information-is-encapsulated-by-some-words-but-not-others-what-do-we-learn-from-this-exercise-about-the-prejudices-of-britains-members-of-parliament-in-the-1850s}
+
+\includegraphics[width=0.8\linewidth]{ch1-11.25.2024_files/figure-latex/word_plots-1}
+\includegraphics[width=0.8\linewidth]{ch1-11.25.2024_files/figure-latex/word_plots-2}
+\includegraphics[width=0.8\linewidth]{ch1-11.25.2024_files/figure-latex/word_plots-3}
+\includegraphics[width=0.8\linewidth]{ch1-11.25.2024_files/figure-latex/word_plots-4}
+\includegraphics[width=0.8\linewidth]{ch1-11.25.2024_files/figure-latex/word_plots-5}
+
+\paragraph{We can see in the ``foreign'' plot that this term is
+relatively neutral, associated with economic and diplomatic terms like
+``laws,'' ``duties,'' ``trade,'' and ``policy.'' It frames interaction
+as a matter of statecraft rather than
+morality.}\label{we-can-see-in-the-foreign-plot-that-this-term-is-relatively-neutral-associated-with-economic-and-diplomatic-terms-like-laws-duties-trade-and-policy.-it-frames-interaction-as-a-matter-of-statecraft-rather-than-morality.}
+
+\paragraph{In comparison, ``savage'' and ``barbarian'' have much
+stronger and controversial associations, conveying harsh judgments about
+morality and intellect. ``Savage'' is rather dehumanizing and is
+associated with violent words like ``brutal,'' ``force,'' and ``war,''
+as well as ``tribes,'' ``India,'' and ``Africa.'' This shows that these
+terms framed non-British peoples as violent or inferior. Compared to the
+other words, ``savage'' shows the strongest biases, depicting minority
+groups as less civilized and more threatening. ``Barbarian'' is less
+explicit about race, but shows a similar issue as ``savage.'' By
+including terms like ``civilization,'' ``Christian,'' and
+``oppressive,'' it implies a bias where European standards are the main
+measure of legitimacy and
+worth.}\label{in-comparison-savage-and-barbarian-have-much-stronger-and-controversial-associations-conveying-harsh-judgments-about-morality-and-intellect.-savage-is-rather-dehumanizing-and-is-associated-with-violent-words-like-brutal-force-and-war-as-well-as-tribes-india-and-africa.-this-shows-that-these-terms-framed-non-british-peoples-as-violent-or-inferior.-compared-to-the-other-words-savage-shows-the-strongest-biases-depicting-minority-groups-as-less-civilized-and-more-threatening.-barbarian-is-less-explicit-about-race-but-shows-a-similar-issue-as-savage.-by-including-terms-like-civilization-christian-and-oppressive-it-implies-a-bias-where-european-standards-are-the-main-measure-of-legitimacy-and-worth.}
+
+\paragraph{``Native'' is dominated by terms like ``India,'' ``British,''
+``population,'' ``land,'' and even ``princes.'' This might imply that
+natives were often discussed in relation to British colonial rule,
+emphasizing the management and control of colonized subjects rather than
+just their status as ``foreign'' or their
+morality.}\label{native-is-dominated-by-terms-like-india-british-population-land-and-even-princes.-this-might-imply-that-natives-were-often-discussed-in-relation-to-british-colonial-rule-emphasizing-the-management-and-control-of-colonized-subjects-rather-than-just-their-status-as-foreign-or-their-morality.}
+
+\paragraph{Colonial appears more government-centric, with terms like
+``colonies,'' ``government,'' ``imperial,'' and ``legislature.'' This
+suggests that discussions of the ``colonial'' were more focused on the
+administrative side of the empire rather than people or
+cultures.}\label{colonial-appears-more-government-centric-with-terms-like-colonies-government-imperial-and-legislature.-this-suggests-that-discussions-of-the-colonial-were-more-focused-on-the-administrative-side-of-the-empire-rather-than-people-or-cultures.}
+
+\paragraph{There is a lot of overlap in these five terms, especially
+within the sectors of law and governance, with ``foreign,'' ``country,''
+and ``British'' recurring. Looking at the terms all together, we can see
+that MPs in the 1850s did not use a singular term for non-British
+peoples, but had several labels that carried different connotations,
+switching between them depending on the arguments and topics. While
+``foreign'' and ``colonial'' were the most ``governmentally neutral,''
+``natives'' implied that certain populations needed governing,
+while''savage'' and ``barbarian'' framed people as threats to European
+civilization, justifying imperial control and racist attitudes. The
+consistent use of legal language across all these terms shows that these
+racial and cultural biases were not just personal prejudices, but were
+built into the frameworks of law and government
+itself.}\label{there-is-a-lot-of-overlap-in-these-five-terms-especially-within-the-sectors-of-law-and-governance-with-foreign-country-and-british-recurring.-looking-at-the-terms-all-together-we-can-see-that-mps-in-the-1850s-did-not-use-a-singular-term-for-non-british-peoples-but-had-several-labels-that-carried-different-connotations-switching-between-them-depending-on-the-arguments-and-topics.-while-foreign-and-colonial-were-the-most-governmentally-neutral-natives-implied-that-certain-populations-needed-governing-whilesavage-and-barbarian-framed-people-as-threats-to-european-civilization-justifying-imperial-control-and-racist-attitudes.-the-consistent-use-of-legal-language-across-all-these-terms-shows-that-these-racial-and-cultural-biases-were-not-just-personal-prejudices-but-were-built-into-the-frameworks-of-law-and-government-itself.}
+
+\subsection{AI Use Statement}\label{ai-use-statement}
+
+\emph{I used AI tools in the following ways:}
+
+\emph{\textbf{Tool used:} ChatGPT}
+
+\begin{itemize}
 \item
-  Alter the code above to compare the context for the keywords ``girl''
-  and ``woman.'' Do you expect the context to be similar for both? Does
-  anything surprise you about the results?
-\item
-  Use your powers of inspecting data to move from the keyword context
-  back to the individual sentences. Cut and paste twenty sentences from
-  the context of each keyword into a word processor. What do you learn
-  from these sentences that you did not learn from counting keywords?
-  Does your analysis become more persuasive when quantitative graphs are
-  accompanied with readings of particular speeches where the words are
-  examined in their original context?
-\item
-  We have examined `coal' and `corn' in the 1850s. Now, search for the
-  words `coal' and `corn' in dataset \texttt{hansard\_1820}. Were they
-  being used in the same way? What changed?
-\item
-  Above, we created the list of words called
-  \texttt{identifiers\_for\_woman}. Use the operator \texttt{\%in\%}
-  with the command \texttt{filter()} to create a list of the words in
-  the context of discussions of women. Create another list called
-  \texttt{identifiers\_for\_man} and do the same for discussions of men.
-  Create visualizations for the top terms used in discussions of men and
-  women.
-\item
-  Reflect on your work so far -- in which you have compared words for
-  gender, the concept of the foreign, and the context of discussions of
-  different commodities. You have made comparisons over time and
-  comparisons of lists. Which of the comparisons do you find the most
-  productive of insight about how certain words were being used in
-  political debate? Are you persuaded by large numbers? Are you
-  persuaded by subtle variations in the context of different words?
-  Write a paragraph explaining for yourself wherein constitutes the most
-  persuasive usage of comparisons between keyword in context.
-\item
-  For the visualizations of the terms associated with different terms
-  for the ``foreign,'' tell us: What biases does each term convey? Where
-  do the terms overlap? What new information is encapsulated by some
-  words but not others? What do we learn from this exercise about the
-  prejudices of Britain's members of parliament in the 1850s?
-\end{enumerate}
+  \emph{\textbf{Purpose:} I used ChatGPT for technical debugging support
+  while completing Question 2. My sentence tables were rendering
+  incorrectly in the R Markdown file, with several issues like slow
+  rendering, clipped phrases, and stray characters appearing in the
+  middle of sentences. I asked for help troubleshooting formatting and
+  for suggestions to shorten or wrap the table text so the output would
+  render properly. I also used it to resolve execution errors ``Quitting
+  from ch1-11.25.2024\ldots Execution halted'' that happened in separate
+  code chunks.}
+
+  \emph{\textbf{Tasks performed independently by me:} I ran and
+  interpreted the Chapter 1 code myself, modified the code to fit the
+  assignment questions, selected and reviewed the sentences used for
+  close reading, and wrote all summary and reflection responses.}
+\end{itemize}
 
 \end{document}
