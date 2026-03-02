@@ -919,7 +919,49 @@ The causes and implications of language changes are interesting to contemplate, 
 
 ## Exercises: 
 
-1) In chapter 3 we analyzed the top words of the Chancellors of the Exchequers for the 1830s by counting top words and visualizing them in a facet wrapped bar chart. This time use tf-idf to create this visualization, but this time using tf-idf as the measurement instead of count.
+
+# 1) In chapter 3 we analyzed the top words of the Chancellors of the Exchequers for the 1830s by counting top words and visualizing them in a facet wrapped bar chart. This time use tf-idf to create this visualization, but this time using tf-idf as the measurement instead of count.
+
+```{R}
+# 1. Filter for the Chancellors (more robust than exact string matching)
+chancellors <- hansard_1830 %>%
+  filter(!is.na(text)) %>%
+  mutate(speaker = stringr::str_squish(speaker)) %>%
+  filter(str_detect(
+    speaker,
+    regex("\\bViscount\\s+Althorp\\b|\\bMr\\s+Spring\\s+Rice\\b|\\bMr\\s+Baring\\b", ignore_case = TRUE)
+  ))
+
+# 2. Tokenize, count, and calculate TF-IDF
+chancellors_tfidf <- chancellors %>%
+  unnest_tokens(word, text) %>%
+  filter(str_detect(word, "^[a-z]+$")) %>%                 # keeps only alphabetic tokens
+  anti_join(stop_words, by = "word") %>%                   # explicit join key
+  count(speaker, word, sort = TRUE) %>%
+  bind_tf_idf(term = word, document = speaker, n = n)
+
+# 3. Extract the top 10 most distinctive words per speaker
+top_chancellor_words <- chancellors_tfidf %>%
+  group_by(speaker) %>%
+  slice_max(tf_idf, n = 10, with_ties = FALSE) %>%
+  ungroup() %>%
+  mutate(word = reorder_within(word, tf_idf, speaker))
+
+# 4. Create the facet-wrapped bar chart
+ggplot(top_chancellor_words, aes(x = tf_idf, y = word)) +
+  geom_col(show.legend = FALSE) +
+  facet_wrap(~ speaker, scales = "free_y") +
+  scale_y_reordered() +
+  labs(
+    title = "Distinctive Words of 1830s Chancellors (TF-IDF)",
+    x = "TF-IDF Score",
+    y = NULL
+  ) +
+  theme_minimal()
+
+# This plot answers: which terms most distinguish each Chancellor’s language from the other Chancellors’ speech in the 1830s?
+# 3. 
+```
 
 2) Take a single debate, such as the 1833 Debate on the Abolition of Slavery, and find the individual speakers. Use JSD to create comparisons between speakers. Remember to go back into the debates themselves and closely read the text before making definitive claims. Refer to chapter 3 if you need a refresher on how to do this.
 
